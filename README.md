@@ -31,6 +31,11 @@ Requirements
 You should carefully read through the tasks to make sure these changes will not break your systems before running this playbook.
 If you want to do a dry run without changing anything, set the below sections (sles12cis_section1-6) to false. 
 
+If ansible  version greater than 2.7 then need to set below environment variable on ansible machine to ignore syntax depriciated error.
+```
+export ANSIBLE_INVALID_TASK_ATTRIBUTE_FAILED=False
+```
+
 Role Variables
 --------------
 There are many role variables defined in defaults/main.yml. This list shows the most important.
@@ -195,7 +200,7 @@ Some examples of using tags:
 	ansible-playbook playbook.yml --list-tags
 	
 	#To run specific section using tags
-	ansible-playbook playbook.yml --rhel7cis_section1
+	ansible-playbook playbook.yml --tags="rhel7cis_section1"
 	
     # To audit and patch the server
     ansible-playbook playbook.yml --tags="patch"
