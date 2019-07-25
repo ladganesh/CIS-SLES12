@@ -1,0 +1,12 @@
+*.swp
+*.retry
+.DS_Store
+.vscode-root
+.Python
+bin/
+/etc/
+include/
+lib/
+pip-selfcheck.json
+share/
+
