@@ -11,4 +11,4 @@
       with_items:
         - which
   roles:
-    - role: SLES12-CIS
+    - role: CIS-SLES12
